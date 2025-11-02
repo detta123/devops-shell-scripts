@@ -1,0 +1,15 @@
+#!/bin/bash
+
+#This script is regarding error handling
+
+
+create_directory(){
+     mkdir demo
+}
+if ! create_directory
+then
+	echo "The code is being exited because the directory already exists"
+	exit 1
+fi
+create_directory
+echo "This should not work because the code is not interrupted"
